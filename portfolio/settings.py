@@ -30,7 +30,16 @@ SECRET_KEY = 'django-insecure-!@^xdttd1i&iefz49^@3gv#@4uvymt2^y+iq1p$1akj6kzu$cg
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CERF_TRUSTED_ORIGINS = ['https://*.onrender.com', 'http://127.0.0.1:8000']
+# settings.py
+
+# render deployment URL
+CSRF_TRUSTED_ORIGINS = [
+    'https://my-portfolio-wza3.onrender.com',
+]
+
+# development URL (optional)
+CSRF_TRUSTED_ORIGINS += ['http://127.0.0.1:8000', 'http://localhost:8000']
+
 
 
 # Application definition
